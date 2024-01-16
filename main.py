@@ -135,7 +135,7 @@ class Student:
 
         self.db.save_student_info(student_info)
 
-    # gets saved asnwer to the question
+    # gets saved answer to the question
     def get_answer_by_question(self, question):
         answer_df = self.faq_df[self.faq_df["question"] == question]
         answer = answer_df["answer"].tolist()
@@ -232,7 +232,7 @@ class Student:
                     option_num = int(option)
 
                     if int(option_num) not in range(1, len(categories) + 1):
-                        print("Wrong was entered, please enter right option number")
+                        print("Wrong option was entered, please enter right option number")
                     else:
                         self.is_option_valid = True
                         self.question = input("\nPlease write your question below\n")
